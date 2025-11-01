@@ -1,0 +1,48 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Colors -->
+  <defs>
+    <style>
+      .ink { stroke:#12C7D6; fill:none; stroke-width:14; stroke-linecap:round; stroke-linejoin:round; }
+      .fill-ink { fill:#12C7D6; }
+      .white { fill:#FFFFFF; }
+    </style>
+  </defs>
+
+  <!-- LOGO MARK (centered) -->
+  <!-- Concentric “fingerprint” rings -->
+  <g transform="translate(256,200)">
+    <!-- outer arcs -->
+    <path class="ink" d="M-150,0
+                         a150,150 0 1 1 300,0"></path>
+    <path class="ink" d="M-125,0
+                         a125,125 0 1 1 250,0"></path>
+    <path class="ink" d="M-100,0
+                         a100,100 0 1 1 200,0"></path>
+    <path class="ink" d="M-75,0
+                         a75,75 0 1 1 150,0"></path>
+    <path class="ink" d="M-50,0
+                         a50,50 0 1 1 100,0"></path>
+
+    <!-- microphone body (capsule) -->
+    <rect x="-28" y="-64" rx="18" ry="18" width="56" height="128" class="fill-ink"></rect>
+    <!-- grill highlight -->
+    <rect x="-16" y="-52" rx="10" ry="10" width="32" height="104" fill="#15D4E6" opacity="0.35"></rect>
+
+    <!-- stem and base -->
+    <path class="fill-ink" d="M-6,76 h12 v30 h-12 z"></path>
+    <path class="ink" d="M-46,124 h92"></path>
+
+    <!-- mic holder curve -->
+    <path class="ink" d="M-70,40
+                         c0,34 30,62 70,62
+                         c40,0 70-28 70-62"></path>
+  </g>
+
+  <!-- WORDMARK -->
+  <g transform="translate(256, 440)">
+    <!-- You can swap the font-family to your preferred brand font -->
+    <text text-anchor="middle" class="white" font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="46" font-weight="700">
+      EchoPrint
+    </text>
+  </g>
+</svg>

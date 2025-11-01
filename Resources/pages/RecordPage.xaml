@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ECHO_PRINT.Resources.pages.RecordPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Record">
+
+    <!-- background -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#0B1220" Offset="0"/>
+            <GradientStop Color="#111827" Offset="1"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout  Padding="24"  Spacing="18" HorizontalOptions="Center" VerticalOptions="Center">
+
+        <!-- title -->
+        <Label Text="EchoPrint" FontSize="22" FontAttributes="Bold" TextColor="#E5E7EB"  HorizontalOptions="Center" />
+
+        <!-- record controls -->
+        <Grid>
+            <!-- pulse -->
+            <Frame x:Name="Pulse" WidthRequest="180" HeightRequest="180"  CornerRadius="90"  BackgroundColor="Snow"  HasShadow="False" IsVisible="False" Opacity="0.15" />
+
+            <!--  record button -->
+            <Button  x:Name="RecordFab" Clicked="recorder"  ImageSource="record_pg.png"  WidthRequest="140" HeightRequest="140" CornerRadius="70" BackgroundColor="#3A7CA5" BorderColor="#5FB2E6" BorderWidth="2">
+                
+                <Button.Shadow>
+                    <Shadow Brush="#66000000" Radius="16" Opacity="0.6" Offset="0,8"/>
+                </Button.Shadow>
+                
+            </Button>
+            
+        </Grid>
+
+        <!-- status label-->
+        <Label x:Name="RecordButton"  Text="Tap to start"  FontSize="14"  TextColor="#9CA3AF"  HorizontalOptions="Center" />
+
+        <!-- hint -->
+        <Label Text="Tap to start/stop."  FontSize="12"   TextColor="#6B7280"  HorizontalTextAlignment="Center"  Margin="0,8,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>

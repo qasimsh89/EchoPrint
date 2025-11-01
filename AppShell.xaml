@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell
+    x:Class="ECHO_PRINT.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ECHO_PRINT.Resources.pages"
+    Shell.NavBarIsVisible="False">
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <!-- color schema -->
+            <Color x:Key="ClrBg">#111827</Color>
+            <Color x:Key="ClrCard">#111827</Color>
+            <Color x:Key="ClrPrimary">#111827</Color>
+            <Color x:Key="ClrPrimaryHi">#5FB2E6</Color>
+            <Color x:Key="ClrAccent">#F25F5C</Color>
+            <Color x:Key="ClrText">#E5E7EB</Color>
+            <Color x:Key="ClrTextSubtle">#9CA3AF</Color>
+
+            <!-- background -->
+            <LinearGradientBrush x:Key="ShellBgBrush" StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#0B1220" Offset="0"/>
+                <GradientStop Color="#111827" Offset="1"/>
+            </LinearGradientBrush>
+
+            <!-- checll background -->
+            <Style TargetType="Shell">
+                <Setter Property="Background" Value="{StaticResource ShellBgBrush}"/>
+                <Setter Property="ForegroundColor" Value="{StaticResource ClrText}"/>
+            </Style>
+
+            <!-- TabBar colors -->
+            <Style TargetType="TabBar">
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource ClrCard}"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource ClrText}"/>
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource ClrPrimaryHi}"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource ClrTextSubtle}"/>
+            </Style>
+
+            <!-- defaults -->
+            <Style TargetType="Tab">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource ClrCard}"/>
+                <Setter Property="Shell.TitleColor" Value="{StaticResource ClrText}"/>
+                <Setter Property="Shell.ForegroundColor" Value="{StaticResource ClrText}"/>
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <Tab Title="Recordings" Icon="list.png">
+            <ShellContent Title="Recordings"
+                          ContentTemplate="{DataTemplate local:RecordList}" />
+        </Tab>
+
+        <Tab Title="Record" Icon="record_menu.png">
+            <ShellContent Title="Record"
+                          ContentTemplate="{DataTemplate local:RecordPage}" />
+        </Tab>
+
+        <Tab Title="Favorites" Icon="fav.png">
+            <ShellContent Title="Favorites"
+                          ContentTemplate="{DataTemplate local:FavRecordings}" />
+        </Tab>
+    </TabBar>
+</Shell>
